@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+section {
+    background-color: rgb(18, 26, 31);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+.container {
+    margin-left: 25%;
+    width: 90%;
+    max-width: 400px;
+    background-color: rgb(39, 55, 59);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.display {
+    background-color: rgb(182, 182, 182);
+    height: 100px;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+    font-size: 30px;
+    position: relative;
+}
+
+.display-1 {
+    opacity: .4;
+    font-size: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.temp-result {
+    position: absolute;
+    bottom: 0;
+    left: 10;
+    font-size: 20px;
+    opacity: .4;
+}
+
+.all_buttons {
+    color: whitesmoke;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+}
+
+.button {
+    border: .5px solid rgba(92, 92, 92, 0.137);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(30, 43, 46);
+}
+
+.btn-zero {
+    grid-column: 1 / 3;
+}
+
+/* .history {
+    position: absolute;
+    top: 0;
+    right: 140px;
+    margin: 30px;
+} */
+
+.history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    position: absolute;
+    background-color: rgb(182, 182, 182);
+    height: 100vh;
+    right: 0;
+    width: 25%;
+}
+
+.heading {
+    right: 140px;
+    color: rgb(32, 32, 32);
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#recents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(32, 32, 32);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    /* For mobile phones: */
+    .container {
+        margin-left: 17%;
+        width: 50%;
+        max-width: 300px;
+    }
+    .display {
+        padding: 10px;
+        height: 80px;
+        font-size: 20px;
+    }
+
+    .button {
+        height: 80px;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 15px;
+    }
+
+    #recents {
+        font-size: 15px;
+    }
+  }
+
+@media screen and (max-width: 564px) {
+    .container {
+        margin-left: 5%;
+        width: 50%;
+        max-width: 200px;
+    }
+
+    .sidebar {
+        width: 40%;
+    }
+
+    .display {
+        padding: 5px;
+        height: 60px;
+        font-size: 15px;
+    }
+
+    .display-1 {
+        font-size: 13px;
+    }
+
+    .temp-result {
+        font-size: 13px;
+    }
+
+    .button {
+        height: 50px;
+        font-size: 15px;
+        width: 100%;
+    }
+
+    #recents {
+        font-size: 13px;
+    }
+}
